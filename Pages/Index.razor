@@ -1,21 +1,24 @@
 ﻿@page "/"
 
-<MudGrid>
-    <MudItem>
-        <h1>NutriFinder</h1>
+
+    <MudItem Style="">
+     <!-- <h1 style="text-align: center">NutriFinder</h1> -->  
     </MudItem>
-    <MudItem>
+
+
+<MudPaper Outlined=false Class="d-flex justify-center flex-row flex-grow-1 gap-4" Elevation="0">
+
         <MudForm @ref="form">
-            <MudTextField T="string" Label="Food" @ref="food" />
+
+            <MudPaper Class="d-inline-flex mr-12" Elevation="0"><MudTextField T="string" Label="Food" @ref="food" /></MudPaper>
 
 
-            <MudPaper Class="pa-4 mt-4">
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="@(()=>form.Validate())">Search</MudButton>
+            <MudPaper Class="d-inline-flex" Outlined=false Elevation="0">
+                <MudButton Class="mr-8" Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="@(()=>form.Validate())">Search</MudButton>
                 <MudButton Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true" OnClick="@(()=>form.ResetAsync())" Class="mx-2">Reset</MudButton>
             </MudPaper>
         </MudForm>
-    </MudItem>
-</MudGrid>
+    </MudPaper>
 
 
 @code {
