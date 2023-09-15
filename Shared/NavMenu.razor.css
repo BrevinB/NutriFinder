@@ -4,10 +4,13 @@
 
 .top-row {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(4 25 255 / 40%);
 }
 
 .navbar-brand {
+    color: white;
+    text-align: center;
+    font-weight: 600;
     font-size: 1.1rem;
 }
 
