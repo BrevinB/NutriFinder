@@ -10,15 +10,49 @@
 
         <MudForm @ref="form">
 
-            <MudPaper Class="d-inline-flex mr-12" Elevation="0"><MudTextField Variant="Variant.Outlined" T="string" Label="Food" @ref="food" Margin="Margin.Dense" /></MudPaper>
+        <MudPaper Class="d-inline-flex mr-12" Elevation="0"><MudTextField Class="border-solid border-4 mud-border-info" T="string" Label="Food" @ref="food" Margin="Margin.Dense" /></MudPaper>
 
 
             <MudPaper Class="d-inline-flex" Outlined=false Elevation="0">
-            <MudButton Class="mr-8 rounded-pill" Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="@(()=>form.Validate())">Search</MudButton>
+            <MudButton Class="mr-8 rounded-pill " Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="@(()=>form.Validate())">Search</MudButton>
             <MudButton Class="rounded-pill" Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true" OnClick="@(()=>form.ResetAsync())">Reset</MudButton>
         </MudPaper>
         </MudForm>
     </MudPaper>
+<MudContainer Fixed=true MaxWidth="MaxWidth.Medium">
+    <MudPaper Width="33%" Class="mx-auto pr-2 pl-2 d-flex justify-center mt-16 border-solid border-4 mud-border-success" Outlined=true Square=true>
+
+        <MudPaper Class="d-flex justify-center flex-row flex-grow-1 gap-4 mx-auto pr-1 pl-1 pb-4 pt-4" Elevation="0">
+            <MudPaper Class="d-flex justify-start flex-column mr-4" Elevation="0">
+                <MudText Align="Align.Left" Class="mb-2">Food</MudText>
+                <MudText Align="Align.Left">Serving</MudText>
+            </MudPaper>
+            <MudSpacer />
+            <MudPaper Class="d-flex justify-end flex-column" Elevation="0">
+                <MudText Align="Align.Left" Class="mb-2">Calories</MudText>
+                <MudText Align="Align.Left">Molecules</MudText>
+            </MudPaper>
+        </MudPaper>
+    </MudPaper>
+
+    <MudPaper Width="33%" Class="mx-auto pr-2 pl-2 d-flex justify-center mt-16 border-solid border-4 mud-border-success" Outlined=true Square=true>
+
+        <MudPaper Class="d-flex justify-center flex-row flex-grow-1 gap-4 mx-auto pr-1 pl-1 pb-4 pt-4" Elevation="0">
+            <MudPaper Class="d-flex justify-start flex-column mr-4" Elevation="0">
+                <MudText Align="Align.Left" Class="mb-2">Food</MudText>
+                <MudText Align="Align.Left">Serving</MudText>
+            </MudPaper>
+            <MudSpacer/>
+            <MudPaper Class="d-flex justify-end flex-column" Elevation="0">
+                <MudText Align="Align.Left" Class="mb-2">Calories</MudText>
+                <MudText Align="Align.Left">Molecules</MudText>
+            </MudPaper>
+        </MudPaper>
+    </MudPaper>
+</MudContainer>
+
+
+
 
 
 @code {
