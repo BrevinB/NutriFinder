@@ -4,7 +4,7 @@
 
         <MudForm @ref="form">
 
-        <MudPaper Class="d-inline-flex mr-12" Elevation="0"><MudTextField Class="border-solid border-4 mud-border-info" T="string" Label="Food" @ref="food" Margin="Margin.Dense" /></MudPaper>
+        <MudPaper Class="d-inline-flex mr-12" Elevation="0"><MudTextField T="string" Label="Food" @ref="food" Variant="Variant.Outlined" /></MudPaper>
 
 
             <MudPaper Class="d-inline-flex" Outlined=false Elevation="0">
@@ -15,6 +15,6 @@
     </MudPaper>
 
 @code {
-    MudForm form;
-    MudTextField<string> food;
+   public MudForm form;
+   public MudTextField<string> food;
 }
