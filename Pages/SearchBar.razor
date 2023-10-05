@@ -1,0 +1,20 @@
+﻿
+
+<MudPaper Outlined=false Class="d-flex justify-center flex-row flex-grow-1 gap-4" Elevation="0">
+
+        <MudForm @ref="form">
+
+        <MudPaper Class="d-inline-flex mr-12" Elevation="0"><MudTextField T="string" Label="Food" @ref="food" Variant="Variant.Outlined" /></MudPaper>
+
+
+            <MudPaper Class="d-inline-flex" Outlined=false Elevation="0">
+            <MudButton Class="mr-8 rounded-pill " Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="@(()=>form.Validate())">Search</MudButton>
+            <MudButton Class="rounded-pill" Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true" OnClick="@(()=>form.ResetAsync())">Reset</MudButton>
+        </MudPaper>
+        </MudForm>
+    </MudPaper>
+
+@code {
+   public MudForm form;
+   public MudTextField<string> food;
+}

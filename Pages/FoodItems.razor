@@ -1,0 +1,32 @@
+﻿<MudPaper Width="33%" Class="mx-auto pr-2 pl-2 d-flex justify-center mt-16 border-solid border-4 mud-border-success" Outlined=true Square=true>
+
+    <MudPaper Class="d-flex justify-center flex-row flex-grow-1 gap-4 mx-auto pr-1 pl-1 pb-4 pt-4" Elevation="0">
+        <MudPaper Class="d-flex justify-start flex-column mr-4" Elevation="0">
+            <MudText Align="Align.Left" Class="mb-2">@foodItem</MudText>
+            <MudText Align="Align.Left">@servingSize</MudText>
+        </MudPaper>
+        <MudSpacer />
+        <MudPaper Class="d-flex justify-end flex-column" Elevation="0">
+            <MudText Align="Align.Left" Class="mb-2">@calories calories</MudText>
+            <MudText Align="Align.Left">C: @carbs, P: @protein, F: @fiber</MudText>
+        </MudPaper>
+    </MudPaper>
+</MudPaper>
+
+@code {
+    [Parameter]
+    public String foodItem { get; set; }
+    [Parameter]
+    public String servingSize { get; set; }
+    [Parameter]
+    public int calories { get; set; }
+    [Parameter]
+    public int carbs { get; set; }
+    [Parameter]
+    public int protein { get; set; }
+    [Parameter]
+    public int fiber { get; set; }
+
+
+
+}
